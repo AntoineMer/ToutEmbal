@@ -22,6 +22,14 @@ namespace ToutEmbal
         private void Form1_Load(object sender, EventArgs e)
         {
             production = new Production();
+            arrêterToolStripMenuItem.Enabled = false;
+            continuerToolStripMenuItem.Enabled = false;
+            aToolStripMenuItem1.Enabled = false;
+            bToolStripMenuItem1.Enabled = false;
+            cToolStripMenuItem1.Enabled = false;
+            aToolStripMenuItem2.Enabled = false;
+            bToolStripMenuItem2.Enabled = false;
+            cToolStripMenuItem2.Enabled = false;
         }
 
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,6 +74,11 @@ namespace ToutEmbal
 
             if (progressBar1.Enabled == true)
             {
+                arrêterToolStripMenuItem.Enabled = true;
+                continuerToolStripMenuItem.Enabled = true;
+                aToolStripMenuItem1.Enabled = true;
+                aToolStripMenuItem2.Enabled = true;
+                aToolStripMenuItem.Enabled = false;
                 if (textBoxNbrOfBoxes.Text != string.Empty)
                 {
                     production.faultsRateSBegining = Convert.ToDouble(textBoxFaultsRateSinceBegining.Text);
@@ -87,6 +100,11 @@ namespace ToutEmbal
 
             else if (progressBar2.Enabled == true)
             {
+                arrêterToolStripMenuItem.Enabled = true;
+                continuerToolStripMenuItem.Enabled = true;
+                bToolStripMenuItem1.Enabled = true;
+                bToolStripMenuItem2.Enabled = true;
+                bToolStripMenuItem.Enabled = false;
                 if (textBoxBNbrBoxes.Text != string.Empty)
                 {
                     production.faultsRateOfLastHour = Convert.ToDouble(textBoxBDefaultHour.Text);
@@ -105,6 +123,11 @@ namespace ToutEmbal
             }
             else if (progressBar3.Enabled == true)
             {
+                arrêterToolStripMenuItem.Enabled = true;
+                continuerToolStripMenuItem.Enabled = true;
+                cToolStripMenuItem2.Enabled = true;
+                cToolStripMenuItem1.Enabled = true;
+                cToolStripMenuItem.Enabled = false;
                 if (textBoxCNbrBoxes.Text != string.Empty)
                 {
 
@@ -132,6 +155,9 @@ namespace ToutEmbal
                 textBoxNbrOfBoxes.Text = string.Empty;
                 textBoxFaultsRateSinceBegining.Text = string.Empty;
                 textBoxFaultsRateOneHour.Text = string.Empty;
+                aToolStripMenuItem.Enabled = true;
+                aToolStripMenuItem1.Enabled = false;
+                aToolStripMenuItem2.Enabled = false;
             }
             else if (progressBar2.Value == production.nbrOfBoxes_typeB)
             {
@@ -142,6 +168,9 @@ namespace ToutEmbal
                 textBoxBDefaultHour.Text = string.Empty;
                 textBoxBNbrBoxes.Text = string.Empty;
                 textBoxBSBegining.Text = string.Empty;
+                bToolStripMenuItem.Enabled = true;
+                bToolStripMenuItem1.Enabled = false;
+                bToolStripMenuItem2.Enabled = false;
             }
             else if (progressBar3.Value == production.nbrOfBoxes_typeC)
             {
@@ -152,6 +181,9 @@ namespace ToutEmbal
                 textBoxCDefaultHour.Text = string.Empty;
                 textBoxCNbrBoxes.Text = string.Empty;
                 textBoxCSBegining.Text = string.Empty;
+                cToolStripMenuItem.Enabled = true;
+                cToolStripMenuItem1.Enabled = false;
+                cToolStripMenuItem2.Enabled = false;
             }
 
 
@@ -160,7 +192,7 @@ namespace ToutEmbal
             {
 
                 timer1.Stop();
-                MessageBox.Show(production.faultsRateOfLastHour.ToString());
+                MessageBox.Show("Taux d'erreur horaire trop élevé : " + production.faultsRateOfLastHour.ToString());
                 progressBar1.Enabled = false;
             }
 
@@ -169,19 +201,20 @@ namespace ToutEmbal
         private void aToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem button = sender as ToolStripMenuItem;
+            {
+                if (button.Tag.ToString() == "1")
+                {
+                    progressBar1.Enabled = false;
 
-            if (button.Tag.ToString() == "1")
-            {
-                progressBar1.Enabled = false;
-
-            }
-            else if (button.Tag.ToString() == "2")
-            {
-                progressBar2.Enabled = false;
-            }
-            else if (button.Tag.ToString() == "3")
-            {
-                progressBar3.Enabled = false;
+                }
+                else if (button.Tag.ToString() == "2")
+                {
+                    progressBar2.Enabled = false;
+                }
+                else if (button.Tag.ToString() == "3")
+                {
+                    progressBar3.Enabled = false;
+                }
             }
         }
 
