@@ -8,6 +8,9 @@ namespace ToutEmbal
 {
     public class Production 
     {
+        //bool etat = false;
+
+
         public double faultsRateOfLastHour;
         public double maxFaultsInOneHour;
         public double nbrOfBoxes_typeA, nbrOfBoxes_typeB, nbrOfBoxes_typeC;
@@ -16,6 +19,11 @@ namespace ToutEmbal
         public double nbrOfBoxesSBegining = 0;
         public int compteur = 0;
      
+
+        public Production(string _type, int toProduct, int perHour)
+        {
+
+        }
 
 
         public Production()

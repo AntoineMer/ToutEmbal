@@ -12,6 +12,8 @@ namespace ToutEmbal
 {
     public partial class Form1 : Form
     {
+
+        //protected Dictionary<string,Production> prods;
         public Production production;
 
         public Form1()
@@ -21,6 +23,15 @@ namespace ToutEmbal
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //prods = new Dictionary<string, Production>()
+            //{
+            //    { "A", new Production("A", 10000, 1000) } ,
+            //    { "B", new Production("B", 25000, 5000) } ,
+            //    { "C",  new Production("C", 120000, 25000) }
+            //};
+
+            //Production a = prods["A"];
+
             production = new Production();
             arrêterToolStripMenuItem.Enabled = false;
             continuerToolStripMenuItem.Enabled = false;
