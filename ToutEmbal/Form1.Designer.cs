@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.TypeA = new System.Windows.Forms.TabPage();
+            this.typeA = new System.Windows.Forms.TabPage();
             this.textBoxFaultsRateSinceBegining = new System.Windows.Forms.TextBox();
             this.textBoxFaultsRateOneHour = new System.Windows.Forms.TextBox();
             this.textBoxNbrOfBoxes = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.typeB = new System.Windows.Forms.TabPage();
+            this.typeC = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,17 +75,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
-            this.TypeA.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.typeA.SuspendLayout();
+            this.typeB.SuspendLayout();
+            this.typeC.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
-            this.tabControl.Controls.Add(this.TypeA);
-            this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.typeA);
+            this.tabControl.Controls.Add(this.typeB);
+            this.tabControl.Controls.Add(this.typeC);
             this.tabControl.Location = new System.Drawing.Point(70, 62);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -94,19 +94,19 @@
             // 
             // TypeA
             // 
-            this.TypeA.Controls.Add(this.textBoxFaultsRateSinceBegining);
-            this.TypeA.Controls.Add(this.textBoxFaultsRateOneHour);
-            this.TypeA.Controls.Add(this.textBoxNbrOfBoxes);
-            this.TypeA.Controls.Add(this.label3);
-            this.TypeA.Controls.Add(this.label2);
-            this.TypeA.Controls.Add(this.label1);
-            this.TypeA.Location = new System.Drawing.Point(4, 22);
-            this.TypeA.Name = "TypeA";
-            this.TypeA.Padding = new System.Windows.Forms.Padding(3);
-            this.TypeA.Size = new System.Drawing.Size(314, 86);
-            this.TypeA.TabIndex = 0;
-            this.TypeA.Text = "TypeA";
-            this.TypeA.UseVisualStyleBackColor = true;
+            this.typeA.Controls.Add(this.textBoxFaultsRateSinceBegining);
+            this.typeA.Controls.Add(this.textBoxFaultsRateOneHour);
+            this.typeA.Controls.Add(this.textBoxNbrOfBoxes);
+            this.typeA.Controls.Add(this.label3);
+            this.typeA.Controls.Add(this.label2);
+            this.typeA.Controls.Add(this.label1);
+            this.typeA.Location = new System.Drawing.Point(4, 22);
+            this.typeA.Name = "TypeA";
+            this.typeA.Padding = new System.Windows.Forms.Padding(3);
+            this.typeA.Size = new System.Drawing.Size(314, 86);
+            this.typeA.TabIndex = 0;
+            this.typeA.Text = "TypeA";
+            this.typeA.UseVisualStyleBackColor = true;
             // 
             // textBoxFaultsRateSinceBegining
             // 
@@ -158,35 +158,35 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.textBoxBSBegining);
-            this.tabPage2.Controls.Add(this.textBoxBDefaultHour);
-            this.tabPage2.Controls.Add(this.textBoxBNbrBoxes);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(314, 86);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "TypeB";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.typeB.Controls.Add(this.label8);
+            this.typeB.Controls.Add(this.label6);
+            this.typeB.Controls.Add(this.label4);
+            this.typeB.Controls.Add(this.textBoxBSBegining);
+            this.typeB.Controls.Add(this.textBoxBDefaultHour);
+            this.typeB.Controls.Add(this.textBoxBNbrBoxes);
+            this.typeB.Location = new System.Drawing.Point(4, 22);
+            this.typeB.Name = "tabPage2";
+            this.typeB.Padding = new System.Windows.Forms.Padding(3);
+            this.typeB.Size = new System.Drawing.Size(314, 86);
+            this.typeB.TabIndex = 1;
+            this.typeB.Text = "TypeB";
+            this.typeB.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.textBoxCSBegining);
-            this.tabPage3.Controls.Add(this.textBoxCDefaultHour);
-            this.tabPage3.Controls.Add(this.textBoxCNbrBoxes);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(314, 86);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "TypeC";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.typeC.Controls.Add(this.label9);
+            this.typeC.Controls.Add(this.label7);
+            this.typeC.Controls.Add(this.label5);
+            this.typeC.Controls.Add(this.textBoxCSBegining);
+            this.typeC.Controls.Add(this.textBoxCDefaultHour);
+            this.typeC.Controls.Add(this.textBoxCNbrBoxes);
+            this.typeC.Location = new System.Drawing.Point(4, 22);
+            this.typeC.Name = "tabPage3";
+            this.typeC.Padding = new System.Windows.Forms.Padding(3);
+            this.typeC.Size = new System.Drawing.Size(314, 86);
+            this.typeC.TabIndex = 2;
+            this.typeC.Text = "TypeC";
+            this.typeC.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -499,12 +499,12 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl.ResumeLayout(false);
-            this.TypeA.ResumeLayout(false);
-            this.TypeA.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.typeA.ResumeLayout(false);
+            this.typeA.PerformLayout();
+            this.typeB.ResumeLayout(false);
+            this.typeB.PerformLayout();
+            this.typeC.ResumeLayout(false);
+            this.typeC.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -515,9 +515,9 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage TypeA;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage typeA;
+        private System.Windows.Forms.TabPage typeB;
+        private System.Windows.Forms.TabPage typeC;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;

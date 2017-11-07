@@ -15,6 +15,7 @@ namespace ToutEmbal
         public double nbrOfBreakedBoxes = 0;
         public double nbrOfBoxesSBegining = 0;
         public int compteur = 0;
+     
 
 
         public Production()
@@ -30,12 +31,18 @@ namespace ToutEmbal
         {
             double typeOfBoxes = 0;
             if (_nbrOfBoxes == 1000)
+            {
                 typeOfBoxes = nbrOfBoxes_typeA;
+            }
             else if (_nbrOfBoxes == 5000)
+            {
                 typeOfBoxes = nbrOfBoxes_typeB;
+            }
             else if (_nbrOfBoxes == 10000)
+            {
                 typeOfBoxes = nbrOfBoxes_typeC;
 
+            }
             if ((nbrOfBoxesSBegining < typeOfBoxes)
                 || (_nbrOfBoxes > (typeOfBoxes - nbrOfBoxesSBegining))
                 )
